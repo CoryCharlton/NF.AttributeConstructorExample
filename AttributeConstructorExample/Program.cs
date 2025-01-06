@@ -12,12 +12,19 @@ namespace AttributeConstructorExample
 
             foreach (var attribute in attributes)
             {
-                if (attribute is not IValueAttribute valueAttribute)
+                switch (attribute)
                 {
-                    continue;
+                    case NoParameterAttribute noParameterAttribute:
+                    {
+                        Console.WriteLine($"-- {noParameterAttribute.GetType()} -- CtorValue: {noParameterAttribute.CtorValue} -- PropValue: {noParameterAttribute.PropValue}");
+                        break;
+                    }
+                    case OptionalParameterAttribute optionalParameterAttribute:
+                    {
+                        Console.WriteLine($"-- {optionalParameterAttribute.GetType()} -- CtorValue: {optionalParameterAttribute.CtorValue} -- PropValue: {optionalParameterAttribute.PropValue}");
+                        break;
+                    }
                 }
-
-                Console.WriteLine($"-- {valueAttribute.GetType()} -- CtorValue: {valueAttribute.CtorValue} -- PropValue: {valueAttribute.PropValue}");
             }
 
             Thread.Sleep(Timeout.Infinite);

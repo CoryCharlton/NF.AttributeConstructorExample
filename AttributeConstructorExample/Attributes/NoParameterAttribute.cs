@@ -3,7 +3,7 @@
 namespace AttributeConstructorExample.Attributes
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
-    public class NoParameterAttribute: Attribute, IValueAttribute
+    public class NoParameterAttribute: Attribute
     {
         public NoParameterAttribute()
         {

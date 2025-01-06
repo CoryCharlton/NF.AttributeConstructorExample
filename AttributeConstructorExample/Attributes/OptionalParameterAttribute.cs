@@ -3,7 +3,7 @@
 namespace AttributeConstructorExample.Attributes
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
-    public class OptionalParameterAttribute: Attribute, IValueAttribute
+    public class OptionalParameterAttribute: Attribute
     {
         public OptionalParameterAttribute()
         {

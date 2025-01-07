@@ -14,6 +14,6 @@ namespace AttributeConstructorExample.Attributes
 
         public string CtorValue { get; }
 
-        public string PropValue { get; } = "PropValue from default";
+        public string PropValue { get; set; } = "PropValue from default";
     }
 }

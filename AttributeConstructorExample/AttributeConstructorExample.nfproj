@@ -18,8 +18,10 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
+    <Compile Include="Attributes\FieldParameterAttribute.cs" />
     <Compile Include="Attributes\NoParameterAttribute.cs" />
     <Compile Include="Attributes\OptionalParameterAttribute.cs" />
+    <Compile Include="Attributes\SimpleAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClass.cs" />
